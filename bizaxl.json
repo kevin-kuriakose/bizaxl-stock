@@ -1,0 +1,8 @@
+{
+    "app_name": "bizaxl_stock",
+    "display_name": "BizAxl Stock",
+    "description": "Stock & Inventory management",
+    "show_modules": ["BizAxl Stock"],
+    "hide_modules": [],
+    "optional_modules": []
+}

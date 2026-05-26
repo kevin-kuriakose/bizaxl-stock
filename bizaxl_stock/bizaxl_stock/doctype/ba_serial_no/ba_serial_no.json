@@ -1,0 +1,19 @@
+{
+    "name": "BA Serial No",
+    "doctype": "DocType",
+    "module": "BizAxl Stock",
+    "autoname": "field:serial_no",
+    "fields": [
+        {"fieldname": "serial_no", "fieldtype": "Data", "label": "Serial No", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "item_code", "fieldtype": "Link", "label": "Item", "options": "BA Item", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "status", "fieldtype": "Select", "label": "Status", "options": "Active\nDelivered\nInactive", "default": "Active", "in_list_view": 1},
+        {"fieldname": "warehouse", "fieldtype": "Link", "label": "Warehouse", "options": "BA Warehouse"},
+        {"fieldname": "purchase_date", "fieldtype": "Date", "label": "Purchase Date"},
+        {"fieldname": "warranty_expiry_date", "fieldtype": "Date", "label": "Warranty Expiry"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Stock Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Stock User", "read": 1}
+    ]
+}

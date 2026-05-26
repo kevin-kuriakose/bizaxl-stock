@@ -1,0 +1,20 @@
+{
+    "name": "BA Item Price",
+    "doctype": "DocType",
+    "module": "BizAxl Stock",
+    "autoname": "naming_series:",
+    "naming_series": "IP-.YYYY.-",
+    "fields": [
+        {"fieldname": "item_code", "fieldtype": "Link", "label": "Item", "options": "BA Item", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "price_list", "fieldtype": "Select", "label": "Price List", "options": "Standard Selling\nStandard Buying", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "currency", "fieldtype": "Link", "label": "Currency", "options": "BA Currency", "reqd": 1},
+        {"fieldname": "price_list_rate", "fieldtype": "Currency", "label": "Rate", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "valid_from", "fieldtype": "Date", "label": "Valid From"},
+        {"fieldname": "valid_upto", "fieldtype": "Date", "label": "Valid Upto"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Stock Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Sales User", "read": 1}
+    ]
+}

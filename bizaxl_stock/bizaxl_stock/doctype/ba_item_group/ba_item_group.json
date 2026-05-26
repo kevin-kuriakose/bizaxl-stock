@@ -1,0 +1,19 @@
+{
+    "name": "BA Item Group",
+    "doctype": "DocType",
+    "module": "BizAxl Stock",
+    "autoname": "field:item_group_name",
+    "is_tree": 1,
+    "nsm_parent_field": "parent_item_group",
+    "fields": [
+        {"fieldname": "item_group_name", "fieldtype": "Data", "label": "Item Group Name", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "parent_item_group", "fieldtype": "Link", "label": "Parent Group", "options": "BA Item Group"},
+        {"fieldname": "is_group", "fieldtype": "Check", "label": "Is Group"},
+        {"fieldname": "disabled", "fieldtype": "Check", "label": "Disabled"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Stock Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "All", "read": 1}
+    ]
+}

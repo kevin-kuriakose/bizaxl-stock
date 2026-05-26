@@ -1,0 +1,40 @@
+{
+    "name": "BA Item",
+    "doctype": "DocType",
+    "module": "BizAxl Stock",
+    "autoname": "field:item_code",
+    "title_field": "item_name",
+    "search_fields": "item_name,item_code,item_group",
+    "fields": [
+        {"fieldname": "item_code", "fieldtype": "Data", "label": "Item Code", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "item_name", "fieldtype": "Data", "label": "Item Name", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "item_group", "fieldtype": "Link", "label": "Item Group", "options": "BA Item Group", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "col1", "fieldtype": "Column Break"},
+        {"fieldname": "stock_uom", "fieldtype": "Link", "label": "Stock UOM", "options": "BA UOM", "reqd": 1, "default": "Nos"},
+        {"fieldname": "is_stock_item", "fieldtype": "Check", "label": "Is Stock Item", "default": "1"},
+        {"fieldname": "has_batch_no", "fieldtype": "Check", "label": "Has Batch No"},
+        {"fieldname": "has_serial_no", "fieldtype": "Check", "label": "Has Serial No"},
+        {"fieldname": "sec_price", "fieldtype": "Section Break", "label": "Pricing"},
+        {"fieldname": "standard_rate", "fieldtype": "Currency", "label": "Standard Selling Rate", "in_list_view": 1},
+        {"fieldname": "valuation_rate", "fieldtype": "Currency", "label": "Valuation Rate"},
+        {"fieldname": "last_purchase_rate", "fieldtype": "Currency", "label": "Last Purchase Rate"},
+        {"fieldname": "sec_stock", "fieldtype": "Section Break", "label": "Stock"},
+        {"fieldname": "opening_stock", "fieldtype": "Float", "label": "Opening Stock", "default": "0"},
+        {"fieldname": "reorder_level", "fieldtype": "Float", "label": "Reorder Level"},
+        {"fieldname": "reorder_qty", "fieldtype": "Float", "label": "Reorder Qty"},
+        {"fieldname": "sec_acc", "fieldtype": "Section Break", "label": "Accounting"},
+        {"fieldname": "income_account", "fieldtype": "Link", "label": "Default Income Account", "options": "BA Account"},
+        {"fieldname": "expense_account", "fieldtype": "Link", "label": "Default Expense Account", "options": "BA Account"},
+        {"fieldname": "stock_account", "fieldtype": "Link", "label": "Stock Account", "options": "BA Account"},
+        {"fieldname": "sec_desc", "fieldtype": "Section Break", "label": "Description"},
+        {"fieldname": "description", "fieldtype": "Text Editor", "label": "Description"},
+        {"fieldname": "disabled", "fieldtype": "Check", "label": "Disabled"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+        {"role": "Stock Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Stock User", "read": 1, "write": 1, "create": 1},
+        {"role": "Sales User", "read": 1},
+        {"role": "Purchase User", "read": 1}
+    ]
+}

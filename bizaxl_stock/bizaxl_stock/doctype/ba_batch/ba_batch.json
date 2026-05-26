@@ -1,0 +1,19 @@
+{
+    "name": "BA Batch",
+    "doctype": "DocType",
+    "module": "BizAxl Stock",
+    "autoname": "naming_series:",
+    "naming_series": "BATCH-.YYYY.-",
+    "fields": [
+        {"fieldname": "batch_id", "fieldtype": "Data", "label": "Batch ID", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "item", "fieldtype": "Link", "label": "Item", "options": "BA Item", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "expiry_date", "fieldtype": "Date", "label": "Expiry Date", "in_list_view": 1},
+        {"fieldname": "manufacturing_date", "fieldtype": "Date", "label": "Manufacturing Date"},
+        {"fieldname": "disabled", "fieldtype": "Check", "label": "Disabled"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Stock Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Stock User", "read": 1}
+    ]
+}

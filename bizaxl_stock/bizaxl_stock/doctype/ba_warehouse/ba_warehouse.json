@@ -1,0 +1,22 @@
+{
+    "name": "BA Warehouse",
+    "doctype": "DocType",
+    "module": "BizAxl Stock",
+    "autoname": "field:warehouse_name",
+    "is_tree": 1,
+    "nsm_parent_field": "parent_warehouse",
+    "fields": [
+        {"fieldname": "warehouse_name", "fieldtype": "Data", "label": "Warehouse Name", "reqd": 1, "in_list_view": 1},
+        {"fieldname": "warehouse_type", "fieldtype": "Select", "label": "Type", "options": "Transit\nStore\nManufacturing", "default": "Store", "in_list_view": 1},
+        {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "BA Company", "reqd": 1},
+        {"fieldname": "parent_warehouse", "fieldtype": "Link", "label": "Parent Warehouse", "options": "BA Warehouse"},
+        {"fieldname": "is_group", "fieldtype": "Check", "label": "Is Group"},
+        {"fieldname": "disabled", "fieldtype": "Check", "label": "Disabled"},
+        {"fieldname": "account", "fieldtype": "Link", "label": "Account", "options": "BA Account"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Stock Manager", "read": 1, "write": 1, "create": 1},
+        {"role": "Stock User", "read": 1}
+    ]
+}

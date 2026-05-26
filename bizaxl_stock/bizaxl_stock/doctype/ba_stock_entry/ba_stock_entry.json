@@ -1,0 +1,26 @@
+{
+    "name": "BA Stock Entry",
+    "doctype": "DocType",
+    "module": "BizAxl Stock",
+    "autoname": "naming_series:",
+    "naming_series": "STE-.YYYY.-",
+    "is_submittable": 1,
+    "fields": [
+        {"fieldname": "naming_series", "fieldtype": "Select", "label": "Series", "options": "STE-.YYYY.-"},
+        {"fieldname": "stock_entry_type", "fieldtype": "Select", "label": "Type", "reqd": 1, "in_list_view": 1,
+         "options": "Material Receipt\nMaterial Issue\nMaterial Transfer\nOpening Stock"},
+        {"fieldname": "posting_date", "fieldtype": "Date", "label": "Posting Date", "reqd": 1, "default": "Today", "in_list_view": 1},
+        {"fieldname": "col1", "fieldtype": "Column Break"},
+        {"fieldname": "company", "fieldtype": "Link", "label": "Company", "options": "BA Company", "reqd": 1},
+        {"fieldname": "from_warehouse", "fieldtype": "Link", "label": "Default Source Warehouse", "options": "BA Warehouse"},
+        {"fieldname": "to_warehouse", "fieldtype": "Link", "label": "Default Target Warehouse", "options": "BA Warehouse"},
+        {"fieldname": "items", "fieldtype": "Table", "label": "Items", "options": "BA Stock Entry Detail", "reqd": 1},
+        {"fieldname": "total_amount", "fieldtype": "Currency", "label": "Total Amount", "read_only": 1},
+        {"fieldname": "remarks", "fieldtype": "Small Text", "label": "Remarks"}
+    ],
+    "permissions": [
+        {"role": "System Manager", "read": 1, "write": 1, "create": 1, "submit": 1, "cancel": 1},
+        {"role": "Stock Manager", "read": 1, "write": 1, "create": 1, "submit": 1, "cancel": 1},
+        {"role": "Stock User", "read": 1, "write": 1, "create": 1}
+    ]
+}
