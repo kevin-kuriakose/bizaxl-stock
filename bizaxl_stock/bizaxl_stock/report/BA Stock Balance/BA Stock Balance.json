@@ -7,5 +7,37 @@
  "name": "BA Stock Balance",
  "ref_doctype": "BA Item",
  "report_name": "BA Stock Balance",
- "report_type": "Script Report"
+ "report_type": "Script Report",
+ "filters": [
+  {
+   "fieldname": "warehouse",
+   "label": "Warehouse",
+   "fieldtype": "Link",
+   "options": "BA Warehouse"
+  },
+  {
+   "fieldname": "item",
+   "label": "Item",
+   "fieldtype": "Link",
+   "options": "BA Item"
+  }
+ ],
+ "columns": [],
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "HR User"
+  }
+ ]
 }
