@@ -18,3 +18,7 @@ doc_events = {
         "on_cancel": "bizaxl_stock.stock_handler.on_purchase_invoice_cancel",
     },
 }
+
+fixtures = [
+    {"doctype": "Workspace", "filters": [["name", "in", ["Stock"]]]},
+]
