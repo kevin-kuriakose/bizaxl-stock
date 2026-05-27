@@ -1,0 +1,11 @@
+{
+ "add_total_row": 1,
+ "disabled": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "BizAxl Stock",
+ "name": "BA Stock Ledger",
+ "ref_doctype": "BA Stock Ledger Entry",
+ "report_name": "BA Stock Ledger",
+ "report_type": "Script Report"
+}

@@ -1,0 +1,11 @@
+{
+ "add_total_row": 1,
+ "disabled": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "module": "BizAxl Stock",
+ "name": "BA Item Price List",
+ "ref_doctype": "BA Item Price",
+ "report_name": "BA Item Price List",
+ "report_type": "Script Report"
+}
